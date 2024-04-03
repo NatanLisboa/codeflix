@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "com.codeflix.admin.catalog"
+group = "com.fullcycle.admin.catalogo.application"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":domain"))
+
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }

@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "com.codeflix.admin.catalog"
+group = "com.fullcycle.admin.catalogo.domain"
 version = "1.0-SNAPSHOT"
 
 repositories {
