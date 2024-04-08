@@ -1,6 +1,7 @@
 package com.codeflix.admin.catalog.domain.category;
 
 import com.codeflix.admin.catalog.domain.AggregateRoot;
+import com.codeflix.admin.catalog.domain.validation.ValidationHandler;
 
 import java.time.Instant;
 
@@ -57,6 +58,11 @@ public class Category extends AggregateRoot<CategoryID> {
 
     public Instant getDeletedAt() {
         return deletedAt;
+    }
+
+    @Override
+    public void validate(ValidationHandler validationHandler) {
+        new CategoryValidator(this, validationHandler).validate();
     }
 
 }
